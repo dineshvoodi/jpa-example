@@ -1,16 +1,10 @@
 spring:
-  datasource:
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres
-  jpa:
-    show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
-    hibernate:
-      ddl-auto: update
+  application:
+    name: jpa-example
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: dev
 
 server:
   port: 9001
-
-
